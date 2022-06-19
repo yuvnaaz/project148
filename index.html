@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color:white">
+
+        <a-camera look-controls-enabled wasd-controls-enabled position="0 8 15"></a-camera>
+
+        <a-assets>
+
+            <a-asset-item id="city" src="./models/city/scene.gltf"></a-asset-item>
+
+        </a-assets>
+        <a-sky color="#2a281e"></a-sky>
+
+        <!--city-->
+        <a-entity>
+            <a-entity position="0 0 0" rotation="0 0 0" scale="0.1 0.01 0.1" gltf-model="#city" shadow="cast: true;">
+            </a-entity>
+        </a-entity>
+
+        <a-entity light="type: point; castShadow: true; color: #e6ca14; intensity: 2.35" position="-5.92951 8.39487 1.29438">
+        </a-entity>
+        <a-entity light="type: ambient;"> </a-entity>
+    </a-scene>
+</body>
+
+</html>
